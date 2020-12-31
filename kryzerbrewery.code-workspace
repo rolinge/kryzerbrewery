@@ -2,6 +2,12 @@
 	"folders": [
 		{
 			"path": "example-blink/platform-espressif8266/examples/arduino-wifiscan"
+		},
+		{
+			"path": "exampleBlinkLCD"
+		},
+		{
+			"path": "tempMeasureDisplay"
 		}
 	]
 }
