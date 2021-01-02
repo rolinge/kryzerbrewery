@@ -199,7 +199,7 @@ void loop()
 
   for (int i = 0; i < 3; i++)
   {
-    sprintf(tempString ,"T%d=%5.1f C", i, sensors.getTempCByIndex(i) );
+    sprintf(tempString ,"T%d=%5.1f   F", i, sensors.getTempFByIndex(i) );
     display.drawString(12,16*i,tempString);
   }
   display.display();
