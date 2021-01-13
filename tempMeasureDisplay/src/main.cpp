@@ -140,16 +140,20 @@ void setup()
 
 void loop()
 {
-  // turn the LED on (HIGH is the voltage level)
-  digitalWrite(LED_BUILTIN, HIGH);
+  // turn the LED off (HIGH is the voltage level)
+  //digitalWrite(LED_BUILTIN, HIGH);
   // wait for a second
-  delay(200);
-  // turn the LED off by making the voltage LOW
+  //delay(100);
+  // turn the LED on by making the voltage LOW
   digitalWrite(LED_BUILTIN, LOW);
    // wait for a second
-  delay(100);
+  //delay(100);
+  // turn the LED off (HIGH is the voltage level)
+  //digitalWrite(LED_BUILTIN, HIGH);
   
   sensors.requestTemperatures(); 
+
+if (0) {  //skip all this output
 
   if ((!sensors.getAddress(insideThermometer, 0)))
   {
@@ -194,7 +198,7 @@ void loop()
     Serial.printf("Device %d Resolution: %d  Temp: %f\n",2 , sensors.getResolution(otherThermometer),  sensors.getTempCByIndex(2));
 
   }
-
+}
   display.clear();
 
   for (int i = 0; i < 3; i++)
@@ -204,7 +208,7 @@ void loop()
   }
   display.display();
   
-  delay(500);
+  delay(1000);
   // method 2: search()
   // search() looks for the next device. Returns 1 if a new address has been
   // returned. A zero might mean that the bus is shorted, there are no devices,
